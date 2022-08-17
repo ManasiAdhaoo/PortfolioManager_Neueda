@@ -13,6 +13,10 @@ def result():
     #tickers = "GOOGL TSLA"
     minr, maxr = Optimizer.optimize(tickers)
     data = {"minr": minr.to_json(), "maxr": maxr.to_json()}
+    print(minr.to_json())
+    print(maxr.to_json())
+    
+    print(data)
     return jsonify(data)
 
 if __name__ == "__main__":
