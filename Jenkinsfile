@@ -8,6 +8,7 @@ pipeline {
   stages {
     stage('Test') {
       steps {
+        sh 'sudo easy_install pip3'
         sh 'pip install -r requirements.txt && python main.py'
         
 
