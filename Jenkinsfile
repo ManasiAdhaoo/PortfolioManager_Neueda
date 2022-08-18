@@ -6,20 +6,7 @@ pipeline {
   agent any
 
   stages {
-    stage('Test') {
-      steps {
-        sh 'sudo easy_install pip3'
-        sh 'pip install -r requirements.txt && python main.py'
-        
-
-      }
-    }
-
-    stage('Build') {
-      steps {
-       sh 'echo "building the repo"'
-      }
-    }
+    
 
     stage('Build Container') {
       steps {
