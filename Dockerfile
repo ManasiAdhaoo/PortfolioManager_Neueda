@@ -1,5 +1,5 @@
 # Use an official Python runtime as a parent image.
-FROM python:latest 
+FROM python:3.7.13.alpine3.16
 # Create an /app folder inside the container.
 RUN mkdir /app
 # Set the working directory inside the container to /app.
