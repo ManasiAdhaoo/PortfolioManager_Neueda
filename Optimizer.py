@@ -83,3 +83,10 @@ def optimize(tickers):
     min_vol_port = df_portfolio.loc[is_min_vol]
     
     return min_vol_port, max_sharpe_port
+
+def totalData(tickers):
+    df = yf.download(tickers.split(), '2020-1-1')['Adj Close']
+
+    df = df[-20:]
+
+    return df.to_json()

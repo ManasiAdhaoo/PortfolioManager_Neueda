@@ -19,5 +19,13 @@ def result():
     data = {"minr": minr.to_json(), "maxr": maxr.to_json()}
     return jsonify(data)
 
+@app.route('/app/total/') 
+@cross_origin()
+def totalData():
+    tickers = request.args.get('tickers')
+    data = Optimizer.totalData(tickers)
+    return data
+
+
 if __name__ == "__main__":
     app.run(debug=True)
